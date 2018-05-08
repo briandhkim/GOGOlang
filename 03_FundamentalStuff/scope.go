@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 //package level scope
-var x int = 42 
+var x int = 42
 
-func main(){
+func main() {
 	fmt.Println(x)
 
 	//block level scope
@@ -15,7 +15,7 @@ func main(){
 	foo()
 }
 
-func foo(){
+func foo() {
 	fmt.Println(x)
 
 	// y is not accesible here

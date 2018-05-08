@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	//shorthand variable declare/assign/initialize
 	a := 10
 	b := "go"
