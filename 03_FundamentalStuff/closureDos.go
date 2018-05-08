@@ -11,5 +11,6 @@ func increment() int {
 
 func main() {
 	fmt.Println(increment())
+	//value not reset because x is package level scope
 	fmt.Println(increment())
 }
