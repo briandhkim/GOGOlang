@@ -19,4 +19,5 @@ func foo(){
 	fmt.Println(x)
 
 	// y is not accesible here
+	// fmt.Println(y)
 }
