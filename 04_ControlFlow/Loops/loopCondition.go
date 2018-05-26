@@ -11,11 +11,23 @@ func main() {
 	// 	i++
 	// }
 
+	// for {
+	// 	fmt.Println(i)
+	// 	if i >= 10 {
+	// 		break
+	// 	}
+	// 	i++
+	// }
+
+	// only printing odd numbers
 	for {
+		i++
+		if i%2 == 0 {
+			continue
+		}
 		fmt.Println(i)
-		if i >= 10 {
+		if i >= 50 {
 			break
 		}
-		i++
 	}
 }
