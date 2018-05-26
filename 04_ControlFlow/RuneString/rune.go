@@ -12,4 +12,9 @@ func main() {
 		// fmt.Println(i, " - ", string(i), " - ", []byte(string(i)))
 		fmt.Printf("%v - %v - %v \n", i, string(i), []byte(string(i)))
 	}
+
+	foo := 'a'       //this is a rune; using single quotes instead of double
+	fmt.Println(foo) //prints 97 (dec of 'a' in ascii)
+	fmt.Printf("%T \n", foo)
+	fmt.Printf("%T \n", rune(foo))
 }
