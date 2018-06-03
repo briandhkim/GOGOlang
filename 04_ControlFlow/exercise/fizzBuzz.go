@@ -3,7 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	fizzBuzz(20)
+	var userNumber int
+	fmt.Print("Enter a number between 1 and 100: ")
+	fmt.Scan(&userNumber)
+
+	fizzBuzz(userNumber)
 }
 
 func fizzBuzz(n int) {
