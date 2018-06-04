@@ -23,3 +23,16 @@ func average(sf ...float64) float64 {
 
 	return total / float64(len(sf))
 }
+
+
+//this would just take the `data` slice as it is
+func average2(sf []float64) float64{
+	var total float64 //set to 0 value (i.e. 0.0)
+
+	//for index,value := ...
+	for _, v := range sf {
+		total += v
+	}
+
+	return total / float64(len(sf))
+}
