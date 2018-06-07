@@ -12,5 +12,5 @@ func main() {
 
 func half(num int) (int, bool) {
 	x := num / 2
-	return x, x%2 == 0
+	return x, num%2 == 0
 }
