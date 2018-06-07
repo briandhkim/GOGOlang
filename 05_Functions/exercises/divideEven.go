@@ -10,7 +10,11 @@ func main() {
 	fmt.Println("input of 7: ", hSeven, hSevenEven)
 }
 
-func half(num int) (int, bool) {
-	x := num / 2
-	return x, num%2 == 0
+// func half(num int) (int, bool) {
+// 	x := num / 2
+// 	return x, num%2 == 0
+// }
+
+func half(n int) (float64, bool) {
+	return float64(n) / 2, n%2 == 0
 }
