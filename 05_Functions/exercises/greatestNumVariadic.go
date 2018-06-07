@@ -9,6 +9,7 @@ func main() {
 }
 
 func max(nums ...int) int {
+	fmt.Printf("%T \n", nums)
 	var maxNum int
 	for _, v := range nums {
 		if v > maxNum {
