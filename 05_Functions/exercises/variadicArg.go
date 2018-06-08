@@ -15,3 +15,5 @@ func main() {
 	foo(aSlice...)
 	foo()
 }
+
+//projecteuler.net for more problems
