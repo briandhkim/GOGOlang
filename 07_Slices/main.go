@@ -22,7 +22,9 @@ import "fmt"
 
 func main() {
 	// slicingExample()
-	lenAndCap()
+	// lenAndCap()
+	// appendToMake()
+	appendSliceToSlice()
 }
 
 func slicingExample() {
@@ -54,4 +56,38 @@ func lenAndCap() {
 		smplSlice = append(smplSlice, i)
 		fmt.Println("Len: ", len(smplSlice), " Cap: ", cap(smplSlice), " Value: ", smplSlice[i])
 	}
+}
+
+func createExample() {
+	//this creates slice with len 3 and cap 3; this can result with performance cost
+	//since going beyond the capacity would require creating new underlying array
+	//so creating slice with make() might be better in some cases
+	greeting := []string{
+		"hello",
+		"hi",
+		"bye", //can end with comma (?)
+	}
+	fmt.Println(greeting)
+}
+
+func appendToMake() {
+	alphaB := make([]string, 3, 5)
+
+	alphaB[0] = "a"
+	alphaB[1] = "b"
+	alphaB[2] = "c"
+
+	//alphaB[3] = "d" //this will result in error since the length is set to 3
+	//for adding items outside of index range, use append
+	alphaB = append(alphaB, "d")
+	fmt.Println(alphaB[3])
+}
+
+func appendSliceToSlice() {
+	numsOne := []int{1, 2, 3, 4}
+	numsTwo := []int{5, 6, 7, 8}
+
+	numsComb := append(numsOne, numsTwo...)
+
+	fmt.Println(numsComb)
 }
