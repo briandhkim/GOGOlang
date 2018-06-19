@@ -24,4 +24,29 @@ func main() {
 	records = append(records, student2)
 
 	fmt.Println(records)
+
+	// doubleSliceInt()
+	loopRecords(records)
+}
+
+func loopRecords(rec [][]string) {
+	for i := 0; i < len(rec); i++ {
+		for m := 0; m < len(rec[i]); m++ {
+			fmt.Println("looping records: i - ", i, "; m - ", m)
+			fmt.Println("record[i] - ", rec[i], "; records[i][m] - ", rec[i][m])
+		}
+	}
+}
+
+//extra slice of slice of int
+func doubleSliceInt() {
+	transactions := make([][]int, 0, 3)
+	for i := 0; i < 3; i++ {
+		transaction := make([]int, 0)
+		for j := 0; j < 4; j++ {
+			transaction = append(transaction, j)
+		}
+		transactions = append(transactions, transaction)
+	}
+	fmt.Println(transactions)
 }
