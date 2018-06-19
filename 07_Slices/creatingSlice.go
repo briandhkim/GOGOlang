@@ -23,6 +23,7 @@ func varSlice() {
 	fmt.Println(student)
 	fmt.Println(students)
 	fmt.Println(student == nil) //true
+	//nil is true here because var initializes the varible to zero value
 	//need to use append to add data
 }
 

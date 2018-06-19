@@ -25,7 +25,8 @@ func main() {
 	// lenAndCap()
 	// appendToMake()
 	// appendSliceToSlice()
-	deleteFromSlice()
+	// deleteFromSlice()
+	incrementFromSlice()
 }
 
 func slicingExample() {
@@ -102,4 +103,13 @@ func deleteFromSlice() {
 
 	sliceOne = append(sliceOne[:2], sliceOne[3:]...)
 	fmt.Println(sliceOne)
+}
+
+func incrementFromSlice() {
+	sample := make([]int, 1)
+	fmt.Println(sample[0])
+	sample[0] = 7
+	fmt.Println(sample[0])
+	sample[0]++
+	fmt.Println(sample[0])
 }
