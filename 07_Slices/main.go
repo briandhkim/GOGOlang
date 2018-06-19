@@ -24,7 +24,8 @@ func main() {
 	// slicingExample()
 	// lenAndCap()
 	// appendToMake()
-	appendSliceToSlice()
+	// appendSliceToSlice()
+	deleteFromSlice()
 }
 
 func slicingExample() {
@@ -90,4 +91,15 @@ func appendSliceToSlice() {
 	numsComb := append(numsOne, numsTwo...)
 
 	fmt.Println(numsComb)
+}
+
+func deleteFromSlice() {
+	sliceOne := []string{"Monday", "Tuesday"}
+	sliceTwo := []string{"Wednesday", "Thursday", "Friday"}
+
+	sliceOne = append(sliceOne, sliceTwo...)
+	fmt.Println(sliceOne)
+
+	sliceOne = append(sliceOne[:2], sliceOne[3:]...)
+	fmt.Println(sliceOne)
 }
