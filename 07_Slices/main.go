@@ -21,7 +21,8 @@ import "fmt"
 **/
 
 func main() {
-	slicingExample()
+	// slicingExample()
+	lenAndCap()
 }
 
 func slicingExample() {
@@ -39,4 +40,18 @@ func slicingExample() {
 		strings are made up of runes, runes are made up of bytes, so strings are made up
 		of bytes. a string is a bunch of bytes; a slice of bytes
 	*/
+}
+
+func lenAndCap() {
+	smplSlice := make([]int, 0, 5)
+	fmt.Println("--------------")
+	fmt.Println(smplSlice)
+	fmt.Println(len(smplSlice))
+	fmt.Println(cap(smplSlice))
+	fmt.Println("--------------")
+
+	for i := 0; i < 40; i++ {
+		smplSlice = append(smplSlice, i)
+		fmt.Println("Len: ", len(smplSlice), " Cap: ", cap(smplSlice), " Value: ", smplSlice[i])
+	}
 }
