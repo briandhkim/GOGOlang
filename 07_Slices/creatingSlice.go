@@ -26,16 +26,17 @@ func varSlice() {
 	//need to use append to add data
 }
 
+//typically, using make with len and cap or just len is the best way to initialize slice
 func makeSlice() {
 	student := make([]string, 10)
 	students := make([][]string, 10)
 	fmt.Println(student)
 	fmt.Println(students)
-	fmt.Println(student == nil)	//false
+	fmt.Println(student == nil) //false
 	//no need to use append if index is in bound of len
 }
 
-func bestWayToSlice(){
+func bestWayToSlice() {
 	student := make([]string, 4, 6)
 	students := make([][]string, 10, 20)
 	fmt.Println(student)
