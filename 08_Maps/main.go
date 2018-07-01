@@ -60,6 +60,8 @@ func deleteSample() {
 	fmt.Println(nums)
 }
 
+
+//checking if value exists
 func checkVal() {
 	check := map[string]int{
 		"alpha":   42,
@@ -69,8 +71,10 @@ func checkVal() {
 	}
 
 	fmt.Println(check)
+	
+	// delete(check, "charlie")
 
-	//checking if value exists
+	//val, exists := check["charlie"];	//instead of keeping this in separate line, having it in the `if` line keeps the scope confined
 	if val, exists := check["charlie"]; exists {
 		delete(check, "charlie")
 		fmt.Println("val: ", val)
@@ -81,4 +85,7 @@ func checkVal() {
 		fmt.Println("exists: ", exists)
 	}
 	fmt.Println(check)
+
+	// value, ex := check["bravo"]
+	// fmt.Printf("%T %T \n", ex, value)
 }
