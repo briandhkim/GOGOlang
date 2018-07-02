@@ -71,9 +71,11 @@ func checkVal() {
 	}
 
 	fmt.Println(check)
-	
+
 	// delete(check, "charlie")
 
+	// 'comma ok' idiom;  value, ok := map['key']
+	//value = map[key] value, ok = bool
 	//val, exists := check["charlie"];	//instead of keeping this in separate line, having it in the `if` line keeps the scope confined
 	if val, exists := check["charlie"]; exists {
 		delete(check, "charlie")
