@@ -20,7 +20,8 @@ func main() {
 	// exampleOne()
 	// compLit()
 	// deleteSample()
-	checkVal()
+	// checkVal()
+	rangeLoop()
 }
 
 func exampleOne() {
@@ -60,7 +61,6 @@ func deleteSample() {
 	fmt.Println(nums)
 }
 
-
 //checking if value exists
 func checkVal() {
 	check := map[string]int{
@@ -90,4 +90,17 @@ func checkVal() {
 
 	// value, ex := check["bravo"]
 	// fmt.Printf("%T %T \n", ex, value)
+}
+
+func rangeLoop() {
+	names := map[int]string{
+		0: "henry",
+		1: "bob",
+		2: "jane",
+		3: "sam",
+	}
+
+	for key, val := range names {
+		fmt.Println(key, "--", val)
+	}
 }
