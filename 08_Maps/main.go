@@ -11,9 +11,11 @@ maps:
 	- vlue of an uninitialized map is nil (because map is reference type like slice)
 
 a map is built on top of a hash table
-map is reference type
+this is why -> map is reference type
 	stores a pointer to the address where the data is actually stored
 
+maps have underlying data structure of hash table
+hash table is built out of arrays
 **/
 
 func main() {
