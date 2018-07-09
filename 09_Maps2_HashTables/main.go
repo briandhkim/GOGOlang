@@ -56,6 +56,7 @@ func hashingMobyDickMoreEven() {
 	buckets := make([][]string, 12)
 	//create slices to hold words words
 	for i := 0; i < 12; i++ {
+		//initializing with empty literal	`[]string{}`
 		buckets = append(buckets, []string{})
 	}
 	//loop over words
@@ -69,7 +70,7 @@ func hashingMobyDickMoreEven() {
 		fmt.Println(i, " - ", len(buckets[i]))
 	}
 	//print the words in one of the buckets
-	fmt.Println(buckets[6])
+	// fmt.Println(buckets[6])
 }
 
 func HashBucketEven(word string, buckets int) int {
